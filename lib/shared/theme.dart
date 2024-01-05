@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-Color whiteColor = const Color(0xFFFFFF);
+Color whiteColor = const Color(0xFFF);
 Color blackColor = const Color(0xFF14193F);
 Color greyColor = const Color(0xFFA4A8AE);
 Color lightBackgroundColor = const Color(0xFFF6F8FB);
