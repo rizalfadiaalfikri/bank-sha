@@ -80,6 +80,7 @@ class HomePage extends StatelessWidget {
         children: [
           buildProfile(),
           buildWalletCard(),
+          buildLevelCard(),
         ],
       ),
     );
@@ -202,6 +203,59 @@ class HomePage extends StatelessWidget {
               color: Colors.white,
               fontSize: 24,
               fontWeight: semiBold,
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget buildLevelCard() {
+    return Container(
+      margin: const EdgeInsets.only(top: 20),
+      padding: const EdgeInsets.all(22),
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(20),
+        color: Colors.white,
+      ),
+      child: Column(
+        children: [
+          Row(
+            children: [
+              Text(
+                'Level 1',
+                style: blackTextStyle.copyWith(
+                  fontSize: 14,
+                  fontWeight: medium,
+                ),
+              ),
+              const Spacer(),
+              Text(
+                '55%',
+                style: greenTextStyle.copyWith(
+                  fontSize: 14,
+                  fontWeight: semiBold,
+                ),
+              ),
+              Text(
+                ' of Rp. 20.000',
+                style: blackTextStyle.copyWith(
+                  fontSize: 14,
+                  fontWeight: semiBold,
+                ),
+              )
+            ],
+          ),
+          SizedBox(
+            height: 10,
+          ),
+          ClipRRect(
+            borderRadius: BorderRadius.circular(55),
+            child: LinearProgressIndicator(
+              value: 0.55,
+              valueColor: AlwaysStoppedAnimation(greenColor),
+              backgroundColor: lightBackgroundColor,
+              minHeight: 5,
             ),
           ),
         ],
