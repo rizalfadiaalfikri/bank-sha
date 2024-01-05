@@ -18,6 +18,21 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      theme: ThemeData(
+        scaffoldBackgroundColor: lightBackgroundColor,
+        appBarTheme: AppBarTheme(
+          centerTitle: true,
+          backgroundColor: lightBackgroundColor,
+          elevation: 0,
+          iconTheme: IconThemeData(
+            color: blackColor,
+          ),
+          titleTextStyle: blackTextStyle.copyWith(
+            fontSize: 20,
+            fontWeight: semiBold,
+          ),
+        ),
+      ),
       debugShowCheckedModeBanner: false,
       routes: {
         '/': (context) => SplashPage(),
