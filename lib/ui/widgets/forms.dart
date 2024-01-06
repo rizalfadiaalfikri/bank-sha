@@ -5,31 +5,37 @@ class CustomForm extends StatelessWidget {
   final String title;
   final bool obsecureText;
   final TextEditingController? controller;
+  final bool isShowTitle;
 
-  const CustomForm(
-      {Key? key,
-      required this.title,
-      this.obsecureText = false,
-      this.controller});
+  const CustomForm({
+    Key? key,
+    required this.title,
+    this.obsecureText = false,
+    this.controller,
+    this.isShowTitle = true,
+  });
 
   @override
   Widget build(BuildContext context) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text(
-          title,
-          style: blackTextStyle.copyWith(
-            fontWeight: medium,
+        if (isShowTitle)
+          Text(
+            title,
+            style: blackTextStyle.copyWith(
+              fontWeight: medium,
+            ),
           ),
-        ),
-        SizedBox(
-          height: 8,
-        ),
+        if (isShowTitle)
+          SizedBox(
+            height: 8,
+          ),
         TextFormField(
           obscureText: obsecureText,
           controller: controller,
           decoration: InputDecoration(
+            hintText: !isShowTitle ? title : null,
             border: OutlineInputBorder(
               borderRadius: BorderRadius.circular(14),
             ),
