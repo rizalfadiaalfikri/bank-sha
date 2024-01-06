@@ -8,6 +8,7 @@ class SignInPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.grey[300],
       body: ListView(
         padding: const EdgeInsets.symmetric(horizontal: 24),
         children: [
