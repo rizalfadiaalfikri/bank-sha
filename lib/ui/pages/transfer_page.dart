@@ -1,6 +1,8 @@
 import 'package:bank_sha/shared/theme.dart';
+import 'package:bank_sha/ui/widgets/buttons.dart';
 import 'package:bank_sha/ui/widgets/forms.dart';
 import 'package:bank_sha/ui/widgets/transfer_recent_user_item.dart';
+import 'package:bank_sha/ui/widgets/transfer_result_user_item.dart';
 import 'package:flutter/material.dart';
 
 class TransferPage extends StatelessWidget {
@@ -32,7 +34,18 @@ class TransferPage extends StatelessWidget {
             title: 'by username',
             isShowTitle: false,
           ),
-          buildRecentUsers(),
+          // buildRecentUsers(),
+          buildResultUser(),
+          const SizedBox(
+            height: 274,
+          ),
+          CustomFilledButton(
+            title: 'Continue',
+            onPressed: () {},
+          ),
+          const SizedBox(
+            height: 20,
+          ),
         ],
       ),
     );
@@ -74,6 +87,43 @@ class TransferPage extends StatelessWidget {
             username: 'form',
             isVerified: true,
           )
+        ],
+      ),
+    );
+  }
+
+  Widget buildResultUser() {
+    return Container(
+      margin: const EdgeInsets.only(top: 40),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(
+            'Result',
+            style: blackTextStyle.copyWith(
+              fontSize: 16,
+              fontWeight: semiBold,
+            ),
+          ),
+          const SizedBox(
+            height: 14,
+          ),
+          Wrap(spacing: 15, runSpacing: 15, children: [
+            TransferResultUserItem(
+              imageUrl: "assets/img_friend1.png",
+              name: 'Yonna Jie',
+              username: 'yoenna',
+              isVerified: true,
+              isSelected: true,
+            ),
+            TransferResultUserItem(
+              imageUrl: "assets/img_friend1.png",
+              name: 'Yonna Jie',
+              username: 'yoenna',
+              isVerified: true,
+              isSelected: true,
+            ),
+          ]),
         ],
       ),
     );

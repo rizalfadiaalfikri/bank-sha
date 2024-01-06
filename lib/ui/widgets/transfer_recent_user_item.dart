@@ -11,7 +11,7 @@ class TransferRecentUserItem extends StatelessWidget {
     required this.imageUrl,
     required this.name,
     required this.username,
-    required this.isVerified,
+    this.isVerified = false,
   });
 
   @override
