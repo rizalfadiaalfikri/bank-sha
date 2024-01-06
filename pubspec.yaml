@@ -92,6 +92,7 @@ flutter:
     - assets/ic_wallet.png
     - assets/ic_withdraw.png
     - assets/img_bank_bca.png
+    - assets/img_bank_bni.png
     - assets/img_bank_mandiri.png
     - assets/img_bank_ocbc.png
     - assets/img_bg_card.png
