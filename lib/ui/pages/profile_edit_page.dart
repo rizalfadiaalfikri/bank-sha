@@ -43,7 +43,7 @@ class ProfileEditPage extends StatelessWidget {
                   child: TextButton(
                     onPressed: () {
                       Navigator.pushNamedAndRemoveUntil(
-                          context, '/home', (route) => false);
+                          context, '/profile-edit-success', (route) => false);
                     },
                     style: TextButton.styleFrom(
                       backgroundColor: purlpeColor,
